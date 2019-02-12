@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f9bf690-6391-4a7f-b558-524c9b862a15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Money.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Two fighters, one winner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Two fighters, one winner/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9f9bf690-6391-4a7f-b558-524c9b862a15" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/src/Money.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -72,11 +69,6 @@
               <item name="Money. Money, Money" type="b2602c69:ProjectViewProjectNode" />
               <item name="Money. Money, Money" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Money. Money, Money" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Money. Money, Money" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -111,7 +103,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1867" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -144,7 +135,7 @@
     <entry file="file://$PROJECT_DIR$/src/Money.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
