@@ -7,4 +7,7 @@ public class Money {
         }
         return years;
     }
+     public static void main(String[] args){
+    	System.out.println(calculateYears(Double.valueOf(args[0]),Double.valueOf(args[1]),Double.valueOf(args[2]), Double.valueOf(args[3])));
+    }
 }

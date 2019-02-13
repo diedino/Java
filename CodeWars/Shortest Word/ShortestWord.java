@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Kata {
+public class ShortestWord {
     public static int findShort(String s) {
         String[] parsed = s.split(" ");
         String shortest = parsed[0];
@@ -9,5 +9,8 @@ public class Kata {
                 shortest = str;
         }
         return shortest.length();
+    }
+    public static void main(String[] args){
+    	System.out.println(findShort(args[0]));
     }
 }
