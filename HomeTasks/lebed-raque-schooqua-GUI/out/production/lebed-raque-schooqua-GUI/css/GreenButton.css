@@ -1,0 +1,20 @@
+.button {
+    -fx-background-color: linear-gradient(#4bff0a,#32990d);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.button:pressed {
+    -fx-effect: dropshadow(three-pass-box, black, 4, 0, 0, 0);
+}
+
+.button:hover {
+     -fx-background-color: linear-gradient(#61e830,#3abf0b);
+}
+
+.button:focus{
+
+}
+
+
