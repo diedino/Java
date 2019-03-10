@@ -10,6 +10,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class Controller {
@@ -28,6 +30,21 @@ public class Controller {
 
     @FXML
     private Button swanbtn;
+
+    @FXML
+    private Circle circle;
+
+    @FXML
+    private Button startbtn;
+
+    @FXML
+    private Button stopbtn;
+
+    @FXML
+    private Button resetbtn;
+
+    @FXML
+    private AnchorPane coordsPane;
 
     @FXML
     void initialize() {
@@ -72,6 +89,19 @@ public class Controller {
                 e.printStackTrace();
             }
         });
+        startbtn.setOnAction(actionEvent -> {
+
+
+        });
+    }
+
+    boolean tryParseInt(String value) {
+        try {
+            Integer.parseInt(value);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
 }

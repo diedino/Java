@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import java.net.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -35,11 +36,14 @@
             <Button fx:id="swanbtn" layoutX="14.0" layoutY="158.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="171.0" text="Swan" />
             <Button fx:id="crawfishbtn" layoutX="14.0" layoutY="216.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="171.0" text="Crawfish" />
             <Button fx:id="pikebtn" layoutX="14.0" layoutY="274.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="171.0" text="Pike" />
-            <Button layoutX="15.0" layoutY="411.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../css/GreenButton.css" text="START" />
-            <Button layoutX="15.0" layoutY="460.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../css/RedButton.css" text="STOP" />
-            <Button layoutX="14.0" layoutY="510.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../css/GrayButton.css" text="RESET" />
+            <Button fx:id="startbtn" layoutX="15.0" layoutY="411.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../css/GreenButton.css" text="START" />
+            <Button fx:id="stopbtn" layoutX="15.0" layoutY="460.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../css/RedButton.css" text="STOP" />
+            <Button fx:id="resetbtn" layoutX="14.0" layoutY="510.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../css/GrayButton.css" text="RESET" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="200.0" prefHeight="550.0" prefWidth="600.0" style="-fx-background-color: #b4d6d3;" />
+      <AnchorPane layoutX="200.0" prefHeight="550.0" prefWidth="600.0" style="-fx-background-color: #b4d6d3;">
+         <children>
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="300.0" layoutY="275.0" radius="271.0" stroke="BLACK" strokeType="INSIDE" />
+         </children></AnchorPane>
    </children>
 </AnchorPane>
