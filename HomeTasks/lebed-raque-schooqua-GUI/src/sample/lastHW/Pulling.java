@@ -12,10 +12,12 @@ public class Pulling {
     private List<Animal> animals;
     private Cart cart;
     private ExecutorService executor;
+    private long sleeptime;
 
-    public Pulling(Cart cart, Animal... animals) {
+    public Pulling(Cart cart, long sleeptime, Animal... animals) {
         this.animals = Arrays.asList(animals);
         this.cart = cart;
+        this.sleeptime = sleeptime;
         executor = Executors.newFixedThreadPool(this.animals.size());
     }
 
@@ -26,10 +28,10 @@ public class Pulling {
                 .collect(Collectors.toList());
         long startingPoint = 0;
         try {
-            while (startingPoint < 25000) {
+            while (startingPoint < sleeptime) {
                 Thread.sleep(1000);
                 startingPoint += 1000;
-                System.out.printf("Current time: %s/%s\n", startingPoint, 25000);
+                System.out.printf("Current time: %s/%s\n", startingPoint, sleeptime);
                 if (startingPoint % 2000 == 0) {
                     cart.printCoords();
                 }
