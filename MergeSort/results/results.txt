@@ -1,0 +1,7 @@
+
+First sort: Sequential sorting time = 23475 nsec
+Part 1: Sequential sorting time = 10193 nsec
+Part 2: Sequential sorting time = 12046 nsec
+First sort: Sequential sorting time = 22239 nsec
+Part 1: Sequential sorting time = 9884 nsec
+Part 2: Sequential sorting time = 12047 nsec
