@@ -1,4 +1,6 @@
-package com.krasnov;
+package com.krasnov.tests;
+
+import com.krasnov.MergeSort;
 
 import static org.junit.Assert.*;
 
