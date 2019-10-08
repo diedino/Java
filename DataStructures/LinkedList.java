@@ -3,11 +3,12 @@ import java.util.*;
 public class LinkedList<T> {
 
     private int size;
-    private LinkedListNode<T> head;
+    private LinkedListNode<T> head, tail;
 
     public LinkedList() {
         size = 0;
         head = null;
+        tail = null;
     }
 
     public int size() {
@@ -49,6 +50,7 @@ public class LinkedList<T> {
             temp = temp.next;
         }
         temp.next=node;
+        tail = node;
         size++;
     }
     public boolean add(LinkedListNode<T> o) {
@@ -59,6 +61,9 @@ public class LinkedList<T> {
         return true;
     }
 
+    public T removeFirst() {
+
+    }
 
     public boolean remove(LinkedListNode<T> o) {
         return false;
