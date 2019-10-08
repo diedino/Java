@@ -53,11 +53,14 @@ public class LinkedList<T> {
         tail = node;
         size++;
     }
-    public boolean add(LinkedListNode<T> o) {
+    public boolean add(T o) {
+        LinkedListNode<T> added = new LinkedListNode<>(o);
         LinkedListNode<T> temp = head;
         while (temp.hasNext())
             temp = temp.next;
-        temp.next = o;
+        temp.next = added;
+        tail = added;
+        size++;
         return true;
     }
 
