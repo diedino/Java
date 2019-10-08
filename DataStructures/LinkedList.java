@@ -62,7 +62,16 @@ public class LinkedList<T> {
     }
 
     public T removeFirst() {
-
+        if (head == null) {
+            return null;
+        }
+        T temp = head.value;
+        if (head==tail)
+            head = tail = null;
+        else
+            head = head.next;
+        size--;
+        return temp;
     }
 
     public boolean remove(LinkedListNode<T> o) {
