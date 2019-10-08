@@ -62,14 +62,33 @@ public class LinkedList<T> {
     }
 
     public T removeFirst() {
-        if (head == null) {
+        if (head == null)
             return null;
-        }
         T temp = head.value;
         if (head==tail)
             head = tail = null;
         else
             head = head.next;
+        size--;
+        return temp;
+    }
+
+    public T removeLast() {
+        if (tail == null)
+            return null;
+        T temp = tail.value;
+        LinkedListNode<T> current = head.next;
+        LinkedListNode<T> previous = head;
+        if (head==tail)
+            head = tail = null;
+        else {
+            while(current != tail) {
+                previous = current;
+                current = current.next;
+            }
+        }
+        previous.next = null;
+        tail = previous;
         size--;
         return temp;
     }
