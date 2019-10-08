@@ -5,6 +5,11 @@ public class LinkedList<T> {
     private int size;
     private LinkedListNode<T> head;
 
+    public LinkedList() {
+        size = 0;
+        head = null;
+    }
+
     public int size() {
         LinkedListNode<T> temp = head;
         int nSize=0;
@@ -26,7 +31,26 @@ public class LinkedList<T> {
         return null;
     }
 
-
+    public void addFirst(T o) {
+        LinkedListNode<T> node = new LinkedListNode<>(o);
+        node.next = head;
+        head = node;
+        size++;
+    }
+    public void addLast(T o) {
+        LinkedListNode<T> node = new LinkedListNode<>(o);
+        if (head == null) {
+            head = node;
+            size++;
+            return;
+        }
+        LinkedListNode<T> temp = head;
+        while (temp.hasNext()) {
+            temp = temp.next;
+        }
+        temp.next=node;
+        size++;
+    }
     public boolean add(LinkedListNode<T> o) {
         LinkedListNode<T> temp = head;
         while (temp.hasNext())
@@ -68,37 +92,40 @@ public class LinkedList<T> {
     public T remove(int i) {
         return null;
     }
+
+
+    class LinkedListNode<T> {
+
+        T value;
+        LinkedListNode<T> next;
+
+        public LinkedListNode() {
+
+        }
+
+        public LinkedListNode(T value) {
+            this.value = value;
+            next = null;
+        }
+
+        public T getValue() {
+            return value;
+        }
+
+        public void setValue(T value) {
+            this.value = value;
+        }
+
+        public LinkedListNode<T> getNext() {
+            return next;
+        }
+
+        public void setNext(LinkedListNode<T> next) {
+            this.next = next;
+        }
+        public boolean hasNext() {
+            return next==null;
+        }
+    }
 }
 
-class LinkedListNode<T> {
-
-    T value;
-    LinkedListNode<T> next;
-
-    public LinkedListNode() {
-
-    }
-
-    public LinkedListNode(T value) {
-        this.value = value;
-    }
-
-    public T getValue() {
-        return value;
-    }
-
-    public void setValue(T value) {
-        this.value = value;
-    }
-
-    public LinkedListNode<T> getNext() {
-        return next;
-    }
-
-    public void setNext(LinkedListNode<T> next) {
-        this.next = next;
-    }
-    public boolean hasNext() {
-        return next==null;
-    }
-}
