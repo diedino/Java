@@ -115,8 +115,14 @@ public class LinkedList<T> {
     }
 
 
-    public T set(int i, T o) {
-        return null;
+    public void set(int i, T o) {
+        Node<T> temp = head;
+        if (i>size-1)
+            return;
+        for(int index=0; index<i; index++) {
+            temp = temp.next;
+        }
+        temp.setValue(o);
     }
 
 
@@ -135,8 +141,14 @@ public class LinkedList<T> {
     }
 
 
-    public T remove(int i) {
-        return null;
+    public void remove(int i) {
+        if (i>size-1)
+            return;
+        Node<T> temp = head;
+        for(int index=0; index<i-1; index++) {
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
     }
 
     public void print() {
@@ -192,6 +204,12 @@ class Main {
         ll.addFirst(11);
         ll.add(12);
         ll.add(13);
+        ll.print();
+        ll.set(0,2);
+        ll.add(14);
+        ll.add(15);
+        ll.print();
+        ll.remove(3);
         ll.print();
     }
 }
