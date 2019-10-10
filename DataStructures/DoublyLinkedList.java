@@ -8,6 +8,23 @@ public class DoublyLinkedList<T> {
         tail = null;
     }
 
+    public int size() {
+        Node<T> temp = head;
+        int nSize=0;
+        while (temp.hasNext()) {
+            temp = temp.next;
+            nSize++;
+        }
+        size = nSize;
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+
+
 
 
 
