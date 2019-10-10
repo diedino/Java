@@ -23,6 +23,40 @@ public class DoublyLinkedList<T> {
         return size == 0;
     }
 
+    public void addFirst() {
+
+    }
+
+    public void addLast() {
+
+    }
+
+    public void add(int i, T o) {
+        Node<T> node = new Node<>(o);
+        Node<T> temp = head;
+        for (int index=0; index<i; index++) {
+            temp = temp.next;
+        }
+        if (temp == null) {
+            return;
+        }
+        node.next = temp.next;
+        temp.next = node;
+        node.previous = temp;
+        if (node.next != null)
+            node.next.previous = node;
+        size++;
+    }
+
+    public T removeFirst() {
+
+    }
+    public T removeLast() {
+
+    }
+    public void remove(int i) {
+
+    }
 
 
 

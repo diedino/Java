@@ -22,11 +22,10 @@ public class LinkedList<T> {
         return size;
     }
 
-
     public boolean isEmpty() {
         return size==0;
     }
-    
+
 
     public void addFirst(T o) {
         Node<T> node = new Node<>(o);
@@ -184,25 +183,3 @@ public class LinkedList<T> {
         }
     }
 }
-
-class Main {
-    public static void main(String[] args) {
-        LinkedList<Integer> ll = new LinkedList<>();
-        System.out.println(ll.isEmpty());
-        ll.addFirst(11);
-        ll.add(12);
-        ll.add(13);
-        ll.print();
-        System.out.println(ll.getSize());
-        ll.set(0,2);
-        ll.add(14);
-        ll.add(15);
-        ll.add(2, 16);
-        ll.print();
-        System.out.println(ll.getSize());
-        ll.remove(3);
-        ll.print();
-        System.out.println(ll.getSize());
-    }
-}
-
