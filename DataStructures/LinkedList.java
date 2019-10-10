@@ -49,7 +49,7 @@ public class LinkedList<T> {
         while (temp.hasNext()) {
             temp = temp.next;
         }
-        temp.next=node;
+        temp.next = node;
         tail = node;
         size++;
     }
@@ -111,7 +111,7 @@ public class LinkedList<T> {
         for (int index=0; index<index; index++) {
             temp = temp.next;
         }
-        return temp.getValue();
+        return temp.value;
     }
 
 
@@ -122,7 +122,7 @@ public class LinkedList<T> {
         for(int index=0; index<i; index++) {
             temp = temp.next;
         }
-        temp.setValue(o);
+        temp.value = o;
     }
 
 
@@ -149,6 +149,7 @@ public class LinkedList<T> {
             temp = temp.next;
         }
         temp.next = temp.next.next;
+        size--;
     }
 
     public void print() {
@@ -160,11 +161,14 @@ public class LinkedList<T> {
         System.out.println(temp.value);
     }
 
+    public int getSize() {
+        return size;
+    }
 
     class Node<T> {
 
-        T value;
-        Node<T> next;
+        private T value;
+        private Node<T> next;
 
         public Node() {
 
@@ -173,22 +177,6 @@ public class LinkedList<T> {
         public Node(T value) {
             this.value = value;
             next = null;
-        }
-
-        public T getValue() {
-            return value;
-        }
-
-        public void setValue(T value) {
-            this.value = value;
-        }
-
-        public Node<T> getNext() {
-            return next;
-        }
-
-        public void setNext(Node<T> next) {
-            this.next = next;
         }
 
         public boolean hasNext() {
@@ -205,12 +193,15 @@ class Main {
         ll.add(12);
         ll.add(13);
         ll.print();
+        System.out.println(ll.getSize());
         ll.set(0,2);
         ll.add(14);
         ll.add(15);
         ll.print();
+        System.out.println(ll.getSize());
         ll.remove(3);
         ll.print();
+        System.out.println(ll.getSize());
     }
 }
 
