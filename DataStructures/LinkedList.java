@@ -26,11 +26,7 @@ public class LinkedList<T> {
     public boolean isEmpty() {
         return size==0;
     }
-
-
-    public Iterator<T> iterator() {
-        return null;
-    }
+    
 
     public void addFirst(T o) {
         Node<T> node = new Node<>(o);
@@ -125,7 +121,11 @@ public class LinkedList<T> {
         temp.value = o;
     }
 
-
+    /**
+     *
+     * @param i - index after which value will be inserted
+     * @param o - value
+     */
     public void add(int i, T o) {
         Node<T> node = new Node<>(o);
         Node<T> temp = head;
@@ -197,6 +197,7 @@ class Main {
         ll.set(0,2);
         ll.add(14);
         ll.add(15);
+        ll.add(2, 16);
         ll.print();
         System.out.println(ll.getSize());
         ll.remove(3);
