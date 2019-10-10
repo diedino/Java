@@ -3,7 +3,7 @@ import java.util.*;
 public class LinkedList<T> {
 
     private int size;
-    private LinkedListNode<T> head, tail;
+    private Node<T> head, tail;
 
     public LinkedList() {
         size = 0;
@@ -12,7 +12,7 @@ public class LinkedList<T> {
     }
 
     public int size() {
-        LinkedListNode<T> temp = head;
+        Node<T> temp = head;
         int nSize=0;
         while (temp.hasNext()) {
             temp = temp.next;
@@ -33,19 +33,19 @@ public class LinkedList<T> {
     }
 
     public void addFirst(T o) {
-        LinkedListNode<T> node = new LinkedListNode<>(o);
+        Node<T> node = new Node<>(o);
         node.next = head;
         head = node;
         size++;
     }
     public void addLast(T o) {
-        LinkedListNode<T> node = new LinkedListNode<>(o);
+        Node<T> node = new Node<>(o);
         if (head == null) {
             head = node;
             size++;
             return;
         }
-        LinkedListNode<T> temp = head;
+        Node<T> temp = head;
         while (temp.hasNext()) {
             temp = temp.next;
         }
@@ -54,8 +54,8 @@ public class LinkedList<T> {
         size++;
     }
     public boolean add(T o) {
-        LinkedListNode<T> added = new LinkedListNode<>(o);
-        LinkedListNode<T> temp = head;
+        Node<T> added = new Node<>(o);
+        Node<T> temp = head;
         while (temp.hasNext())
             temp = temp.next;
         temp.next = added;
@@ -80,8 +80,8 @@ public class LinkedList<T> {
         if (tail == null)
             return null;
         T temp = tail.value;
-        LinkedListNode<T> current = head.next;
-        LinkedListNode<T> previous = head;
+        Node<T> current = head.next;
+        Node<T> previous = head;
         if (head==tail)
             head = tail = null;
         else {
@@ -96,7 +96,7 @@ public class LinkedList<T> {
         return temp;
     }
 
-    public boolean remove(LinkedListNode<T> o) {
+    public boolean remove(Node<T> o) {
         return false;
     }
 
@@ -106,9 +106,9 @@ public class LinkedList<T> {
     }
 
 
-    public T get(int index) {
-        LinkedListNode<T> temp = head;
-        for (int i=0; i<index; i++) {
+    public T get(int i) {
+        Node<T> temp = head;
+        for (int index=0; index<index; index++) {
             temp = temp.next;
         }
         return temp.getValue();
@@ -121,7 +121,17 @@ public class LinkedList<T> {
 
 
     public void add(int i, T o) {
-
+        Node<T> node = new Node<>(o);
+        Node<T> temp = head;
+        for (int index=0; index<i; index++) {
+            temp = temp.next;
+        }
+        if (temp == null) {
+            return;
+        }
+        node.next = temp.next;
+        temp.next = node;
+        size++;
     }
 
 
@@ -129,17 +139,26 @@ public class LinkedList<T> {
         return null;
     }
 
+    public void print() {
+        Node<T> temp = head;
+        while (temp.hasNext()) {
+            System.out.print(temp.value+" ");
+            temp = temp.next;
+        }
+        System.out.println(temp.value);
+    }
 
-    class LinkedListNode<T> {
+
+    class Node<T> {
 
         T value;
-        LinkedListNode<T> next;
+        Node<T> next;
 
-        public LinkedListNode() {
+        public Node() {
 
         }
 
-        public LinkedListNode(T value) {
+        public Node(T value) {
             this.value = value;
             next = null;
         }
@@ -152,16 +171,28 @@ public class LinkedList<T> {
             this.value = value;
         }
 
-        public LinkedListNode<T> getNext() {
+        public Node<T> getNext() {
             return next;
         }
 
-        public void setNext(LinkedListNode<T> next) {
+        public void setNext(Node<T> next) {
             this.next = next;
         }
+
         public boolean hasNext() {
-            return next==null;
+            return next!=null;
         }
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        LinkedList<Integer> ll = new LinkedList<>();
+        System.out.println(ll.isEmpty());
+        ll.addFirst(11);
+        ll.add(12);
+        ll.add(13);
+        ll.print();
     }
 }
 
