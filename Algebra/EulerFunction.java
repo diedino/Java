@@ -1,7 +1,10 @@
 
-public class EulerFunction {
+public final class EulerFunction {
 
-    public int phi (int n) {
+    private EulerFunction() {
+
+    }
+    public static int phi (int n) {
         int result = n;
         for (int i=2; i*i<=n; ++i)
             if (n % i == 0) {
