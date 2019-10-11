@@ -1,8 +1,7 @@
-import java.util.Scanner;
 
 public class EulerFunction {
 
-    public static int phi (int n) {
+    public int phi (int n) {
         int result = n;
         for (int i=2; i*i<=n; ++i)
             if (n % i == 0) {
