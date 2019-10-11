@@ -63,10 +63,22 @@ public class DoublyLinkedList<T> {
             node.next.previous = node;
         size++;
     }
-/*
+
     public T removeFirst() {
+     if (head == null)
+            return null;
+        T temp = head.value;
+        if (head==tail)
+            head = tail = null;
+        else {
+            head = head.next;
+            head.previous=null;
+        }
+        size--;
+        return temp;
 
     }
+   /*
     public T removeLast() {
 
     }
