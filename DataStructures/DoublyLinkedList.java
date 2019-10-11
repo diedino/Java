@@ -23,12 +23,28 @@ public class DoublyLinkedList<T> {
         return size == 0;
     }
 
-    public void addFirst() {
-
+    public void addFirst(T o) {
+        Node<T> node = new Node<>(o);
+        node.next = head;
+        head = node;
+        size++;
     }
 
-    public void addLast() {
-
+    public void addLast(T o) {
+        Node<T> node = new Node<>(o);
+        if (head == null) {
+            head = node;
+            size++;
+            return;
+        }
+        Node<T> temp = head;
+        while (temp.hasNext()) {
+            temp = temp.next;
+        }
+        temp.next = node;
+        node.previous = temp;
+        tail = node;
+        size++;
     }
 
     public void add(int i, T o) {
@@ -47,7 +63,7 @@ public class DoublyLinkedList<T> {
             node.next.previous = node;
         size++;
     }
-
+/*
     public T removeFirst() {
 
     }
@@ -57,6 +73,7 @@ public class DoublyLinkedList<T> {
     public void remove(int i) {
 
     }
+*/
 
 
 
@@ -66,10 +83,18 @@ public class DoublyLinkedList<T> {
 
 
 
+    public void print() {
+        Node<T> temp = head;
+        while (temp.hasNext()) {
+            System.out.print(temp.value+" ");
+            temp = temp.next;
+        }
+        System.out.println(temp.value);
+    }
 
-
-
-
+    public int getSize() {
+        return size;
+    }
 
     class Node<T> {
 
