@@ -92,8 +92,10 @@ public class LinkedList<T> {
 
 
     public T get(int i) {
+        if (i>size-1)
+            return null;
         Node<T> temp = head;
-        for (int index=0; index<index; index++) {
+        for (int index=0; index<i; index++) {
             temp = temp.next;
         }
         return temp.value;
