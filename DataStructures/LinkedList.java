@@ -48,16 +48,6 @@ public class LinkedList<T> {
         tail = node;
         size++;
     }
-    public boolean add(T o) {
-        Node<T> added = new Node<>(o);
-        Node<T> temp = head;
-        while (temp.hasNext())
-            temp = temp.next;
-        temp.next = added;
-        tail = added;
-        size++;
-        return true;
-    }
 
     public T removeFirst() {
         if (head == null)
